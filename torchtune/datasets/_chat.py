@@ -100,7 +100,7 @@ class ChatDataset(Dataset):
         messages = self._convert_to_messages(sample, self.train_on_input)
         if self.chat_format is not None:
             messages = self.chat_format.format(messages)
-        validate_messages(messages)
+        #validate_messages(messages)
         tokens, mask = self._tokenizer.tokenize_messages(
             messages,
         )
